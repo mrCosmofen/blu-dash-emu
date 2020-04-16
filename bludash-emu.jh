@@ -1,0 +1,87 @@
+/**
+ * The application configuration.
+ * @author A true hipster
+ */
+application {
+    config {
+        baseName emulator
+        applicationType monolith
+        authenticationType jwt
+        buildTool gradle
+        clientFramework react
+        databaseType sql
+        devDatabaseType h2Disk
+        prodDatabaseType postgresql
+    }
+    entities *
+}
+
+entity BluForm {
+    key String
+    label String
+    category String
+    productKey String
+    pollingInterval Long
+    modified Long
+}
+entity BluField {
+    key String
+    label String
+    dataType BluFieldType
+    dataFormat String
+    values String
+}
+entity BluFieldValue {
+    
+}
+relationship OneToMany {
+    BluForm to BluField
+}
+enum BluFieldType {
+    ENUM, NUMBER, PERCENT, TEXT, DATETIME, CURRENCY, LATLONG
+}
+/**
+ * The Dataset entity.
+ * @author A true hipster
+ */
+entity DataSet {
+    key String
+    label String
+    landingPage String
+}
+entity Query {
+    key String
+    label String
+}
+entity DataModel {
+    key String
+    label String
+    dataFormat String
+    maxLength Integer
+    precision Integer
+    values Status
+}
+entity Record {
+    recordId Integer
+}
+entity QueryData {
+    recordId String
+    value String
+}
+enum Status {
+    WITHDRAWN, CARRIER_REJECTED, TENDER_BYPASSED, SPOTMARKET, OLD, EXPIRED, PENDING, LOAD_REMOVED, VOIDED, COMPLETED, ACCEPTED, SHIPPER_REJECTED, CANCELED, TENDERED, NO_OFFERS, REMOVED
+}
+/**
+ * One to many relationship.
+ */
+relationship OneToMany {
+    DataSet to DataModel
+    Record to QueryData
+    Query to Record
+}
+/**
+ * One to one relationship.
+ */
+relationship OneToOne {
+    QueryData to DataModel
+}
