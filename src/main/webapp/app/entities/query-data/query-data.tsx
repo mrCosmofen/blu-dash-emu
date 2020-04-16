@@ -37,9 +37,6 @@ export const QueryData = (props: IQueryDataProps) => {
                   <Translate contentKey="global.field.id">ID</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="emulatorApp.queryData.recordId">Record Id</Translate>
-                </th>
-                <th>
                   <Translate contentKey="emulatorApp.queryData.value">Value</Translate>
                 </th>
                 <th>
@@ -59,7 +56,6 @@ export const QueryData = (props: IQueryDataProps) => {
                       {queryData.id}
                     </Button>
                   </td>
-                  <td>{queryData.recordId}</td>
                   <td>{queryData.value}</td>
                   <td>{queryData.dataModel ? <Link to={`data-model/${queryData.dataModel.id}`}>{queryData.dataModel.id}</Link> : ''}</td>
                   <td>{queryData.record ? <Link to={`record/${queryData.record.id}`}>{queryData.record.id}</Link> : ''}</td>

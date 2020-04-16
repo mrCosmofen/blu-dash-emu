@@ -24,9 +24,6 @@ public class QueryData implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "record_id")
-    private String recordId;
-
     @Column(name = "value")
     private String value;
 
@@ -45,19 +42,6 @@ public class QueryData implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getRecordId() {
-        return recordId;
-    }
-
-    public QueryData recordId(String recordId) {
-        this.recordId = recordId;
-        return this;
-    }
-
-    public void setRecordId(String recordId) {
-        this.recordId = recordId;
     }
 
     public String getValue() {
@@ -120,7 +104,6 @@ public class QueryData implements Serializable {
     public String toString() {
         return "QueryData{" +
             "id=" + getId() +
-            ", recordId='" + getRecordId() + "'" +
             ", value='" + getValue() + "'" +
             "}";
     }
