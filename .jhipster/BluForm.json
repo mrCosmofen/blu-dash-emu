@@ -3,7 +3,7 @@
     "fields": [
         {
             "fieldName": "key",
-            "fieldType": "String"
+            "fieldType": "UUID"
         },
         {
             "fieldName": "label",

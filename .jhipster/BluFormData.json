@@ -2,10 +2,6 @@
     "name": "BluFormData",
     "fields": [
         {
-            "fieldName": "formKey",
-            "fieldType": "String"
-        },
-        {
             "fieldName": "retrieved",
             "fieldType": "Long"
         }

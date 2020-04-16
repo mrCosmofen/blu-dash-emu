@@ -81,12 +81,6 @@ export const BluFormDataUpdate = (props: IBluFormDataUpdateProps) => {
                 </AvGroup>
               ) : null}
               <AvGroup>
-                <Label id="formKeyLabel" for="blu-form-data-formKey">
-                  <Translate contentKey="emulatorApp.bluFormData.formKey">Form Key</Translate>
-                </Label>
-                <AvField id="blu-form-data-formKey" type="text" name="formKey" />
-              </AvGroup>
-              <AvGroup>
                 <Label id="retrievedLabel" for="blu-form-data-retrieved">
                   <Translate contentKey="emulatorApp.bluFormData.retrieved">Retrieved</Translate>
                 </Label>

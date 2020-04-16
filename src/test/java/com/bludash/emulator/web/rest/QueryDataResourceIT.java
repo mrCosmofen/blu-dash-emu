@@ -30,9 +30,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser
 public class QueryDataResourceIT {
 
-    private static final String DEFAULT_RECORD_ID = "AAAAAAAAAA";
-    private static final String UPDATED_RECORD_ID = "BBBBBBBBBB";
-
     private static final String DEFAULT_VALUE = "AAAAAAAAAA";
     private static final String UPDATED_VALUE = "BBBBBBBBBB";
 
@@ -55,7 +52,6 @@ public class QueryDataResourceIT {
      */
     public static QueryData createEntity(EntityManager em) {
         QueryData queryData = new QueryData()
-            .recordId(DEFAULT_RECORD_ID)
             .value(DEFAULT_VALUE);
         return queryData;
     }
@@ -67,7 +63,6 @@ public class QueryDataResourceIT {
      */
     public static QueryData createUpdatedEntity(EntityManager em) {
         QueryData queryData = new QueryData()
-            .recordId(UPDATED_RECORD_ID)
             .value(UPDATED_VALUE);
         return queryData;
     }
@@ -92,7 +87,6 @@ public class QueryDataResourceIT {
         List<QueryData> queryDataList = queryDataRepository.findAll();
         assertThat(queryDataList).hasSize(databaseSizeBeforeCreate + 1);
         QueryData testQueryData = queryDataList.get(queryDataList.size() - 1);
-        assertThat(testQueryData.getRecordId()).isEqualTo(DEFAULT_RECORD_ID);
         assertThat(testQueryData.getValue()).isEqualTo(DEFAULT_VALUE);
     }
 
@@ -127,7 +121,6 @@ public class QueryDataResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(queryData.getId().intValue())))
-            .andExpect(jsonPath("$.[*].recordId").value(hasItem(DEFAULT_RECORD_ID)))
             .andExpect(jsonPath("$.[*].value").value(hasItem(DEFAULT_VALUE)));
     }
     
@@ -142,7 +135,6 @@ public class QueryDataResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(queryData.getId().intValue()))
-            .andExpect(jsonPath("$.recordId").value(DEFAULT_RECORD_ID))
             .andExpect(jsonPath("$.value").value(DEFAULT_VALUE));
     }
 
@@ -167,7 +159,6 @@ public class QueryDataResourceIT {
         // Disconnect from session so that the updates on updatedQueryData are not directly saved in db
         em.detach(updatedQueryData);
         updatedQueryData
-            .recordId(UPDATED_RECORD_ID)
             .value(UPDATED_VALUE);
 
         restQueryDataMockMvc.perform(put("/api/query-data")
@@ -179,7 +170,6 @@ public class QueryDataResourceIT {
         List<QueryData> queryDataList = queryDataRepository.findAll();
         assertThat(queryDataList).hasSize(databaseSizeBeforeUpdate);
         QueryData testQueryData = queryDataList.get(queryDataList.size() - 1);
-        assertThat(testQueryData.getRecordId()).isEqualTo(UPDATED_RECORD_ID);
         assertThat(testQueryData.getValue()).isEqualTo(UPDATED_VALUE);
     }
 

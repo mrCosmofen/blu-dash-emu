@@ -5,7 +5,6 @@ import { IBluForm } from 'app/shared/model/blu-form.model';
 
 export interface IBluFormData {
   id?: number;
-  formKey?: string;
   retrieved?: number;
   bluFieldStringValues?: IBluFieldStringValue[];
   bluFieldCurrencyValues?: IBluFieldCurrencyValue[];

@@ -9,6 +9,7 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
 import com.bludash.emulator.domain.enumeration.Status;
 
@@ -28,7 +29,7 @@ public class DataModel implements Serializable {
     private Long id;
 
     @Column(name = "key")
-    private String key;
+    private UUID key;
 
     @Column(name = "label")
     private String label;
@@ -63,16 +64,16 @@ public class DataModel implements Serializable {
         this.id = id;
     }
 
-    public String getKey() {
+    public UUID getKey() {
         return key;
     }
 
-    public DataModel key(String key) {
+    public DataModel key(UUID key) {
         this.key = key;
         return this;
     }
 
-    public void setKey(String key) {
+    public void setKey(UUID key) {
         this.key = key;
     }
 

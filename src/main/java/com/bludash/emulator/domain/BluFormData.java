@@ -26,9 +26,6 @@ public class BluFormData implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "form_key")
-    private String formKey;
-
     @Column(name = "retrieved")
     private Long retrieved;
 
@@ -55,19 +52,6 @@ public class BluFormData implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getFormKey() {
-        return formKey;
-    }
-
-    public BluFormData formKey(String formKey) {
-        this.formKey = formKey;
-        return this;
-    }
-
-    public void setFormKey(String formKey) {
-        this.formKey = formKey;
     }
 
     public Long getRetrieved() {
@@ -192,7 +176,6 @@ public class BluFormData implements Serializable {
     public String toString() {
         return "BluFormData{" +
             "id=" + getId() +
-            ", formKey='" + getFormKey() + "'" +
             ", retrieved=" + getRetrieved() +
             "}";
     }

@@ -26,12 +26,6 @@ export const BluFormDataDetail = (props: IBluFormDataDetailProps) => {
         </h2>
         <dl className="jh-entity-details">
           <dt>
-            <span id="formKey">
-              <Translate contentKey="emulatorApp.bluFormData.formKey">Form Key</Translate>
-            </span>
-          </dt>
-          <dd>{bluFormDataEntity.formKey}</dd>
-          <dt>
             <span id="retrieved">
               <Translate contentKey="emulatorApp.bluFormData.retrieved">Retrieved</Translate>
             </span>
