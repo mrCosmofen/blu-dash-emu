@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 /**
  * A Query.
@@ -26,7 +27,7 @@ public class Query implements Serializable {
     private Long id;
 
     @Column(name = "key")
-    private String key;
+    private UUID key;
 
     @Column(name = "label")
     private String label;
@@ -44,16 +45,16 @@ public class Query implements Serializable {
         this.id = id;
     }
 
-    public String getKey() {
+    public UUID getKey() {
         return key;
     }
 
-    public Query key(String key) {
+    public Query key(UUID key) {
         this.key = key;
         return this;
     }
 
-    public void setKey(String key) {
+    public void setKey(UUID key) {
         this.key = key;
     }
 

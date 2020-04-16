@@ -2,10 +2,6 @@
     "name": "QueryData",
     "fields": [
         {
-            "fieldName": "recordId",
-            "fieldType": "String"
-        },
-        {
             "fieldName": "value",
             "fieldType": "String"
         }

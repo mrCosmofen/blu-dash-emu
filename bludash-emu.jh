@@ -13,12 +13,13 @@ application {
         devDatabaseType h2Disk
         prodDatabaseType postgresql
         packageName com.bludash.emulator
+        skipUserManagement false
     }
     entities *
 }
 
 entity BluForm {
-    key String
+    key UUID
     label String
     category String
     productKey String
@@ -26,14 +27,13 @@ entity BluForm {
     modified Long
 }
 entity BluField {
-    key String
+    key UUID
     label String
     dataType BluFieldType
     dataFormat String
     values String
 }
 entity BluFormData {
-    formKey String
     retrieved Long
 }
 entity BluFieldStringValue {
@@ -66,16 +66,16 @@ enum BluFieldType {
  * @author A true hipster
  */
 entity DataSet {
-    key String
+    key UUID
     label String
     landingPage String
 }
 entity Query {
-    key String
+    key UUID
     label String
 }
 entity DataModel {
-    key String
+    key UUID
     label String
     dataFormat String
     maxLength Integer
@@ -86,7 +86,6 @@ entity Record {
     recordId Integer
 }
 entity QueryData {
-    recordId String
     value String
 }
 enum Status {

@@ -37,9 +37,6 @@ export const BluFormData = (props: IBluFormDataProps) => {
                   <Translate contentKey="global.field.id">ID</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="emulatorApp.bluFormData.formKey">Form Key</Translate>
-                </th>
-                <th>
                   <Translate contentKey="emulatorApp.bluFormData.retrieved">Retrieved</Translate>
                 </th>
                 <th>
@@ -56,7 +53,6 @@ export const BluFormData = (props: IBluFormDataProps) => {
                       {bluFormData.id}
                     </Button>
                   </td>
-                  <td>{bluFormData.formKey}</td>
                   <td>{bluFormData.retrieved}</td>
                   <td>{bluFormData.bluForm ? <Link to={`blu-form/${bluFormData.bluForm.id}`}>{bluFormData.bluForm.id}</Link> : ''}</td>
                   <td className="text-right">

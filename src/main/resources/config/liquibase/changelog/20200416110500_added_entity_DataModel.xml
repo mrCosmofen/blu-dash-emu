@@ -15,7 +15,7 @@
             <column name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="key" type="varchar(255)">
+            <column name="key" type="${uuidType}">
                 <constraints nullable="true" />
             </column>
             <column name="label" type="varchar(255)">
@@ -59,7 +59,7 @@
                   separator=";"
                   tableName="data_model">
             <column name="id" type="numeric"/>
-            <column name="key" type="string"/>
+            <column name="key" type="${uuidType}"/>
             <column name="label" type="string"/>
             <column name="data_format" type="string"/>
             <column name="max_length" type="numeric"/>

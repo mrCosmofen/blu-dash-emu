@@ -30,9 +30,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser
 public class BluFormDataResourceIT {
 
-    private static final String DEFAULT_FORM_KEY = "AAAAAAAAAA";
-    private static final String UPDATED_FORM_KEY = "BBBBBBBBBB";
-
     private static final Long DEFAULT_RETRIEVED = 1L;
     private static final Long UPDATED_RETRIEVED = 2L;
 
@@ -55,7 +52,6 @@ public class BluFormDataResourceIT {
      */
     public static BluFormData createEntity(EntityManager em) {
         BluFormData bluFormData = new BluFormData()
-            .formKey(DEFAULT_FORM_KEY)
             .retrieved(DEFAULT_RETRIEVED);
         return bluFormData;
     }
@@ -67,7 +63,6 @@ public class BluFormDataResourceIT {
      */
     public static BluFormData createUpdatedEntity(EntityManager em) {
         BluFormData bluFormData = new BluFormData()
-            .formKey(UPDATED_FORM_KEY)
             .retrieved(UPDATED_RETRIEVED);
         return bluFormData;
     }
@@ -92,7 +87,6 @@ public class BluFormDataResourceIT {
         List<BluFormData> bluFormDataList = bluFormDataRepository.findAll();
         assertThat(bluFormDataList).hasSize(databaseSizeBeforeCreate + 1);
         BluFormData testBluFormData = bluFormDataList.get(bluFormDataList.size() - 1);
-        assertThat(testBluFormData.getFormKey()).isEqualTo(DEFAULT_FORM_KEY);
         assertThat(testBluFormData.getRetrieved()).isEqualTo(DEFAULT_RETRIEVED);
     }
 
@@ -127,7 +121,6 @@ public class BluFormDataResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(bluFormData.getId().intValue())))
-            .andExpect(jsonPath("$.[*].formKey").value(hasItem(DEFAULT_FORM_KEY)))
             .andExpect(jsonPath("$.[*].retrieved").value(hasItem(DEFAULT_RETRIEVED.intValue())));
     }
     
@@ -142,7 +135,6 @@ public class BluFormDataResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(bluFormData.getId().intValue()))
-            .andExpect(jsonPath("$.formKey").value(DEFAULT_FORM_KEY))
             .andExpect(jsonPath("$.retrieved").value(DEFAULT_RETRIEVED.intValue()));
     }
 
@@ -167,7 +159,6 @@ public class BluFormDataResourceIT {
         // Disconnect from session so that the updates on updatedBluFormData are not directly saved in db
         em.detach(updatedBluFormData);
         updatedBluFormData
-            .formKey(UPDATED_FORM_KEY)
             .retrieved(UPDATED_RETRIEVED);
 
         restBluFormDataMockMvc.perform(put("/api/blu-form-data")
@@ -179,7 +170,6 @@ public class BluFormDataResourceIT {
         List<BluFormData> bluFormDataList = bluFormDataRepository.findAll();
         assertThat(bluFormDataList).hasSize(databaseSizeBeforeUpdate);
         BluFormData testBluFormData = bluFormDataList.get(bluFormDataList.size() - 1);
-        assertThat(testBluFormData.getFormKey()).isEqualTo(UPDATED_FORM_KEY);
         assertThat(testBluFormData.getRetrieved()).isEqualTo(UPDATED_RETRIEVED);
     }
 
