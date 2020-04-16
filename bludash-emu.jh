@@ -13,6 +13,7 @@ application {
         devDatabaseType h2Disk
         prodDatabaseType postgresql
         packageName com.bludash.emulator
+        skipUserManagement false
     }
     entities *
 }
@@ -86,7 +87,6 @@ entity Record {
     recordId Integer
 }
 entity QueryData {
-    recordId String
     value String
 }
 enum Status {

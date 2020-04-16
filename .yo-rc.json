@@ -26,7 +26,7 @@
     "packageName": "com.bludash.emulator",
     "packageFolder": "com/bludash/emulator",
     "jhipsterVersion": "6.8.0",
-    "creationTimestamp": 1587034560947,
+    "creationTimestamp": 1587035940752,
     "skipServer": false,
     "clientPackageManager": "npm",
     "clientTheme": "none",
