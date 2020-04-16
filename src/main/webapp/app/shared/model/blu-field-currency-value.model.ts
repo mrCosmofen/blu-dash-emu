@@ -3,7 +3,7 @@ import { IBluFormData } from 'app/shared/model/blu-form-data.model';
 
 export interface IBluFieldCurrencyValue {
   id?: number;
-  value?: number;
+  fieldValue?: number;
   currency?: string;
   bluField?: IBluField;
   bluFormData?: IBluFormData;

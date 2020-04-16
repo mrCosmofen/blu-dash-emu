@@ -2,7 +2,7 @@
     "name": "BluFieldStringValue",
     "fields": [
         {
-            "fieldName": "value",
+            "fieldName": "fieldValue",
             "fieldType": "String"
         }
     ],

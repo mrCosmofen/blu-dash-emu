@@ -2,7 +2,7 @@
     "name": "BluFieldCurrencyValue",
     "fields": [
         {
-            "fieldName": "value",
+            "fieldName": "fieldValue",
             "fieldType": "Long"
         },
         {

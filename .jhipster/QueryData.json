@@ -2,7 +2,7 @@
     "name": "QueryData",
     "fields": [
         {
-            "fieldName": "value",
+            "fieldName": "dataValue",
             "fieldType": "String"
         }
     ],

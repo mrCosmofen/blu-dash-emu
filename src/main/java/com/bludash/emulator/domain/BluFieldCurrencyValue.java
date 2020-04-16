@@ -24,8 +24,8 @@ public class BluFieldCurrencyValue implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "value")
-    private Long value;
+    @Column(name = "field_value")
+    private Long fieldValue;
 
     @Column(name = "currency")
     private String currency;
@@ -47,17 +47,17 @@ public class BluFieldCurrencyValue implements Serializable {
         this.id = id;
     }
 
-    public Long getValue() {
-        return value;
+    public Long getFieldValue() {
+        return fieldValue;
     }
 
-    public BluFieldCurrencyValue value(Long value) {
-        this.value = value;
+    public BluFieldCurrencyValue fieldValue(Long fieldValue) {
+        this.fieldValue = fieldValue;
         return this;
     }
 
-    public void setValue(Long value) {
-        this.value = value;
+    public void setFieldValue(Long fieldValue) {
+        this.fieldValue = fieldValue;
     }
 
     public String getCurrency() {
@@ -120,7 +120,7 @@ public class BluFieldCurrencyValue implements Serializable {
     public String toString() {
         return "BluFieldCurrencyValue{" +
             "id=" + getId() +
-            ", value=" + getValue() +
+            ", fieldValue=" + getFieldValue() +
             ", currency='" + getCurrency() + "'" +
             "}";
     }

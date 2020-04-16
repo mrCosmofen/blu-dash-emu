@@ -131,10 +131,10 @@ export const BluFieldUpdate = (props: IBluFieldUpdateProps) => {
                 <AvField id="blu-field-dataFormat" type="text" name="dataFormat" />
               </AvGroup>
               <AvGroup>
-                <Label id="valuesLabel" for="blu-field-values">
-                  <Translate contentKey="emulatorApp.bluField.values">Values</Translate>
+                <Label id="fieldValuesLabel" for="blu-field-fieldValues">
+                  <Translate contentKey="emulatorApp.bluField.fieldValues">Field Values</Translate>
                 </Label>
-                <AvField id="blu-field-values" type="text" name="values" />
+                <AvField id="blu-field-fieldValues" type="text" name="fieldValues" />
               </AvGroup>
               <AvGroup>
                 <Label for="blu-field-bluForm">

@@ -37,7 +37,7 @@ export const BluFieldNumberValue = (props: IBluFieldNumberValueProps) => {
                   <Translate contentKey="global.field.id">ID</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="emulatorApp.bluFieldNumberValue.value">Value</Translate>
+                  <Translate contentKey="emulatorApp.bluFieldNumberValue.fieldValue">Field Value</Translate>
                 </th>
                 <th>
                   <Translate contentKey="emulatorApp.bluFieldNumberValue.bluField">Blu Field</Translate>
@@ -56,7 +56,7 @@ export const BluFieldNumberValue = (props: IBluFieldNumberValueProps) => {
                       {bluFieldNumberValue.id}
                     </Button>
                   </td>
-                  <td>{bluFieldNumberValue.value}</td>
+                  <td>{bluFieldNumberValue.fieldValue}</td>
                   <td>
                     {bluFieldNumberValue.bluField ? (
                       <Link to={`blu-field/${bluFieldNumberValue.bluField.id}`}>{bluFieldNumberValue.bluField.id}</Link>

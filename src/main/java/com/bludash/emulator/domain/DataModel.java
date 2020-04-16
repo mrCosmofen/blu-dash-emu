@@ -44,8 +44,8 @@ public class DataModel implements Serializable {
     private Integer precision;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "values")
-    private Status values;
+    @Column(name = "model_values")
+    private Status modelValues;
 
     @OneToOne(mappedBy = "dataModel")
     @JsonIgnore
@@ -129,17 +129,17 @@ public class DataModel implements Serializable {
         this.precision = precision;
     }
 
-    public Status getValues() {
-        return values;
+    public Status getModelValues() {
+        return modelValues;
     }
 
-    public DataModel values(Status values) {
-        this.values = values;
+    public DataModel modelValues(Status modelValues) {
+        this.modelValues = modelValues;
         return this;
     }
 
-    public void setValues(Status values) {
-        this.values = values;
+    public void setModelValues(Status modelValues) {
+        this.modelValues = modelValues;
     }
 
     public QueryData getQueryData() {
@@ -194,7 +194,7 @@ public class DataModel implements Serializable {
             ", dataFormat='" + getDataFormat() + "'" +
             ", maxLength=" + getMaxLength() +
             ", precision=" + getPrecision() +
-            ", values='" + getValues() + "'" +
+            ", modelValues='" + getModelValues() + "'" +
             "}";
     }
 }

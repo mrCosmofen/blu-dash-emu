@@ -49,7 +49,7 @@ export const BluField = (props: IBluFieldProps) => {
                   <Translate contentKey="emulatorApp.bluField.dataFormat">Data Format</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="emulatorApp.bluField.values">Values</Translate>
+                  <Translate contentKey="emulatorApp.bluField.fieldValues">Field Values</Translate>
                 </th>
                 <th>
                   <Translate contentKey="emulatorApp.bluField.bluForm">Blu Form</Translate>
@@ -71,7 +71,7 @@ export const BluField = (props: IBluFieldProps) => {
                     <Translate contentKey={`emulatorApp.BluFieldType.${bluField.dataType}`} />
                   </td>
                   <td>{bluField.dataFormat}</td>
-                  <td>{bluField.values}</td>
+                  <td>{bluField.fieldValues}</td>
                   <td>{bluField.bluForm ? <Link to={`blu-form/${bluField.bluForm.id}`}>{bluField.bluForm.id}</Link> : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">

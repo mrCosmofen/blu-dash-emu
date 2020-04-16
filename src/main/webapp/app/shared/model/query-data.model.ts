@@ -3,7 +3,7 @@ import { IRecord } from 'app/shared/model/record.model';
 
 export interface IQueryData {
   id?: number;
-  value?: string;
+  dataValue?: string;
   dataModel?: IDataModel;
   record?: IRecord;
 }

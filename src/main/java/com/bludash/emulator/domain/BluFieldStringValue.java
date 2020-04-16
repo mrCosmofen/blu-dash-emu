@@ -24,8 +24,8 @@ public class BluFieldStringValue implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "value")
-    private String value;
+    @Column(name = "field_value")
+    private String fieldValue;
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -44,17 +44,17 @@ public class BluFieldStringValue implements Serializable {
         this.id = id;
     }
 
-    public String getValue() {
-        return value;
+    public String getFieldValue() {
+        return fieldValue;
     }
 
-    public BluFieldStringValue value(String value) {
-        this.value = value;
+    public BluFieldStringValue fieldValue(String fieldValue) {
+        this.fieldValue = fieldValue;
         return this;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setFieldValue(String fieldValue) {
+        this.fieldValue = fieldValue;
     }
 
     public BluField getBluField() {
@@ -104,7 +104,7 @@ public class BluFieldStringValue implements Serializable {
     public String toString() {
         return "BluFieldStringValue{" +
             "id=" + getId() +
-            ", value='" + getValue() + "'" +
+            ", fieldValue='" + getFieldValue() + "'" +
             "}";
     }
 }

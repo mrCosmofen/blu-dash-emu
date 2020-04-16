@@ -52,7 +52,7 @@ export const DataModel = (props: IDataModelProps) => {
                   <Translate contentKey="emulatorApp.dataModel.precision">Precision</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="emulatorApp.dataModel.values">Values</Translate>
+                  <Translate contentKey="emulatorApp.dataModel.modelValues">Model Values</Translate>
                 </th>
                 <th>
                   <Translate contentKey="emulatorApp.dataModel.dataSet">Data Set</Translate>
@@ -74,7 +74,7 @@ export const DataModel = (props: IDataModelProps) => {
                   <td>{dataModel.maxLength}</td>
                   <td>{dataModel.precision}</td>
                   <td>
-                    <Translate contentKey={`emulatorApp.Status.${dataModel.values}`} />
+                    <Translate contentKey={`emulatorApp.Status.${dataModel.modelValues}`} />
                   </td>
                   <td>{dataModel.dataSet ? <Link to={`data-set/${dataModel.dataSet.id}`}>{dataModel.dataSet.id}</Link> : ''}</td>
                   <td className="text-right">

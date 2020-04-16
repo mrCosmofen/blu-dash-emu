@@ -19,7 +19,7 @@
             "fieldType": "String"
         },
         {
-            "fieldName": "values",
+            "fieldName": "fieldValues",
             "fieldType": "String"
         }
     ],

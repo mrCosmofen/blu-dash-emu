@@ -56,11 +56,11 @@ export const DataModelDetail = (props: IDataModelDetailProps) => {
           </dt>
           <dd>{dataModelEntity.precision}</dd>
           <dt>
-            <span id="values">
-              <Translate contentKey="emulatorApp.dataModel.values">Values</Translate>
+            <span id="modelValues">
+              <Translate contentKey="emulatorApp.dataModel.modelValues">Model Values</Translate>
             </span>
           </dt>
-          <dd>{dataModelEntity.values}</dd>
+          <dd>{dataModelEntity.modelValues}</dd>
           <dt>
             <Translate contentKey="emulatorApp.dataModel.dataSet">Data Set</Translate>
           </dt>

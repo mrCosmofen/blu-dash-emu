@@ -16,7 +16,7 @@
       "detail": {
         "title": "Query Data"
       },
-      "value": "Value",
+      "dataValue": "Data Value",
       "dataModel": "Data Model",
       "record": "Record"
     }

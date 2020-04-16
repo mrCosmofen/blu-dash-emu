@@ -27,7 +27,7 @@
             <column name="data_format" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="values" type="varchar(255)">
+            <column name="field_values" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="blu_form_id" type="bigint">
@@ -60,7 +60,7 @@
             <column name="label" type="string"/>
             <column name="data_type" type="string"/>
             <column name="data_format" type="string"/>
-            <column name="values" type="string"/>
+            <column name="field_values" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
         </loadData>
     </changeSet>
