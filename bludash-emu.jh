@@ -1,0 +1,109 @@
+/**
+ * The application configuration.
+ * @author A true hipster
+ */
+application {
+    config {
+        baseName emulator
+        applicationType monolith
+        authenticationType jwt
+        buildTool gradle
+        clientFramework react
+        databaseType sql
+        devDatabaseType h2Disk
+        prodDatabaseType postgresql
+        packageName com.bludash.emulator
+    }
+    entities *
+}
+
+entity BluForm {
+    key String
+    label String
+    category String
+    productKey String
+    pollingInterval Long
+    modified Long
+}
+entity BluField {
+    key String
+    label String
+    dataType BluFieldType
+    dataFormat String
+    values String
+}
+entity BluFormData {
+    formKey String
+    retrieved Long
+}
+entity BluFieldStringValue {
+    value String
+}
+entity BluFieldNumberValue {
+    value Long
+}
+entity BluFieldCurrencyValue {
+    value Long
+    currency String
+}
+relationship OneToOne {
+    BluFieldStringValue to BluField
+    BluFieldCurrencyValue to BluField
+    BluFieldNumberValue to BluField
+}
+relationship OneToMany {
+    BluForm to BluField
+    BluForm to BluFormData
+    BluFormData to BluFieldStringValue
+    BluFormData to BluFieldCurrencyValue 
+    BluFormData to BluFieldNumberValue
+}
+enum BluFieldType {
+    ENUM, NUMBER, PERCENT, TEXT, DATETIME, CURRENCY, LATLONG
+}
+/**
+ * The Dataset entity.
+ * @author A true hipster
+ */
+entity DataSet {
+    key String
+    label String
+    landingPage String
+}
+entity Query {
+    key String
+    label String
+}
+entity DataModel {
+    key String
+    label String
+    dataFormat String
+    maxLength Integer
+    precision Integer
+    values Status
+}
+entity Record {
+    recordId Integer
+}
+entity QueryData {
+    recordId String
+    value String
+}
+enum Status {
+    WITHDRAWN, CARRIER_REJECTED, TENDER_BYPASSED, SPOTMARKET, OLD, EXPIRED, PENDING, LOAD_REMOVED, VOIDED, COMPLETED, ACCEPTED, SHIPPER_REJECTED, CANCELED, TENDERED, NO_OFFERS, REMOVED
+}
+/**
+ * One to many relationship.
+ */
+relationship OneToMany {
+    User to DataSet
+    DataSet to DataModel
+    Record to QueryData
+    Query to Record
+}
+/**
+ * One to one relationship.
+ */
+relationship OneToOne {
+    QueryData to DataModel
+}
