@@ -47,8 +47,8 @@ public class DataModelResourceIT {
     private static final Integer DEFAULT_PRECISION = 1;
     private static final Integer UPDATED_PRECISION = 2;
 
-    private static final Status DEFAULT_VALUES = Status.WITHDRAWN;
-    private static final Status UPDATED_VALUES = Status.CARRIER_REJECTED;
+    private static final Status DEFAULT_MODEL_VALUES = Status.WITHDRAWN;
+    private static final Status UPDATED_MODEL_VALUES = Status.CARRIER_REJECTED;
 
     @Autowired
     private DataModelRepository dataModelRepository;
@@ -74,7 +74,7 @@ public class DataModelResourceIT {
             .dataFormat(DEFAULT_DATA_FORMAT)
             .maxLength(DEFAULT_MAX_LENGTH)
             .precision(DEFAULT_PRECISION)
-            .values(DEFAULT_VALUES);
+            .modelValues(DEFAULT_MODEL_VALUES);
         return dataModel;
     }
     /**
@@ -90,7 +90,7 @@ public class DataModelResourceIT {
             .dataFormat(UPDATED_DATA_FORMAT)
             .maxLength(UPDATED_MAX_LENGTH)
             .precision(UPDATED_PRECISION)
-            .values(UPDATED_VALUES);
+            .modelValues(UPDATED_MODEL_VALUES);
         return dataModel;
     }
 
@@ -119,7 +119,7 @@ public class DataModelResourceIT {
         assertThat(testDataModel.getDataFormat()).isEqualTo(DEFAULT_DATA_FORMAT);
         assertThat(testDataModel.getMaxLength()).isEqualTo(DEFAULT_MAX_LENGTH);
         assertThat(testDataModel.getPrecision()).isEqualTo(DEFAULT_PRECISION);
-        assertThat(testDataModel.getValues()).isEqualTo(DEFAULT_VALUES);
+        assertThat(testDataModel.getModelValues()).isEqualTo(DEFAULT_MODEL_VALUES);
     }
 
     @Test
@@ -158,7 +158,7 @@ public class DataModelResourceIT {
             .andExpect(jsonPath("$.[*].dataFormat").value(hasItem(DEFAULT_DATA_FORMAT)))
             .andExpect(jsonPath("$.[*].maxLength").value(hasItem(DEFAULT_MAX_LENGTH)))
             .andExpect(jsonPath("$.[*].precision").value(hasItem(DEFAULT_PRECISION)))
-            .andExpect(jsonPath("$.[*].values").value(hasItem(DEFAULT_VALUES.toString())));
+            .andExpect(jsonPath("$.[*].modelValues").value(hasItem(DEFAULT_MODEL_VALUES.toString())));
     }
     
     @Test
@@ -177,7 +177,7 @@ public class DataModelResourceIT {
             .andExpect(jsonPath("$.dataFormat").value(DEFAULT_DATA_FORMAT))
             .andExpect(jsonPath("$.maxLength").value(DEFAULT_MAX_LENGTH))
             .andExpect(jsonPath("$.precision").value(DEFAULT_PRECISION))
-            .andExpect(jsonPath("$.values").value(DEFAULT_VALUES.toString()));
+            .andExpect(jsonPath("$.modelValues").value(DEFAULT_MODEL_VALUES.toString()));
     }
 
     @Test
@@ -206,7 +206,7 @@ public class DataModelResourceIT {
             .dataFormat(UPDATED_DATA_FORMAT)
             .maxLength(UPDATED_MAX_LENGTH)
             .precision(UPDATED_PRECISION)
-            .values(UPDATED_VALUES);
+            .modelValues(UPDATED_MODEL_VALUES);
 
         restDataModelMockMvc.perform(put("/api/data-models")
             .contentType(MediaType.APPLICATION_JSON)
@@ -222,7 +222,7 @@ public class DataModelResourceIT {
         assertThat(testDataModel.getDataFormat()).isEqualTo(UPDATED_DATA_FORMAT);
         assertThat(testDataModel.getMaxLength()).isEqualTo(UPDATED_MAX_LENGTH);
         assertThat(testDataModel.getPrecision()).isEqualTo(UPDATED_PRECISION);
-        assertThat(testDataModel.getValues()).isEqualTo(UPDATED_VALUES);
+        assertThat(testDataModel.getModelValues()).isEqualTo(UPDATED_MODEL_VALUES);
     }
 
     @Test

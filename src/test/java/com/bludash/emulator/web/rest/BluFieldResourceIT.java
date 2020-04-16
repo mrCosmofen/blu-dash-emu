@@ -44,8 +44,8 @@ public class BluFieldResourceIT {
     private static final String DEFAULT_DATA_FORMAT = "AAAAAAAAAA";
     private static final String UPDATED_DATA_FORMAT = "BBBBBBBBBB";
 
-    private static final String DEFAULT_VALUES = "AAAAAAAAAA";
-    private static final String UPDATED_VALUES = "BBBBBBBBBB";
+    private static final String DEFAULT_FIELD_VALUES = "AAAAAAAAAA";
+    private static final String UPDATED_FIELD_VALUES = "BBBBBBBBBB";
 
     @Autowired
     private BluFieldRepository bluFieldRepository;
@@ -70,7 +70,7 @@ public class BluFieldResourceIT {
             .label(DEFAULT_LABEL)
             .dataType(DEFAULT_DATA_TYPE)
             .dataFormat(DEFAULT_DATA_FORMAT)
-            .values(DEFAULT_VALUES);
+            .fieldValues(DEFAULT_FIELD_VALUES);
         return bluField;
     }
     /**
@@ -85,7 +85,7 @@ public class BluFieldResourceIT {
             .label(UPDATED_LABEL)
             .dataType(UPDATED_DATA_TYPE)
             .dataFormat(UPDATED_DATA_FORMAT)
-            .values(UPDATED_VALUES);
+            .fieldValues(UPDATED_FIELD_VALUES);
         return bluField;
     }
 
@@ -113,7 +113,7 @@ public class BluFieldResourceIT {
         assertThat(testBluField.getLabel()).isEqualTo(DEFAULT_LABEL);
         assertThat(testBluField.getDataType()).isEqualTo(DEFAULT_DATA_TYPE);
         assertThat(testBluField.getDataFormat()).isEqualTo(DEFAULT_DATA_FORMAT);
-        assertThat(testBluField.getValues()).isEqualTo(DEFAULT_VALUES);
+        assertThat(testBluField.getFieldValues()).isEqualTo(DEFAULT_FIELD_VALUES);
     }
 
     @Test
@@ -151,7 +151,7 @@ public class BluFieldResourceIT {
             .andExpect(jsonPath("$.[*].label").value(hasItem(DEFAULT_LABEL)))
             .andExpect(jsonPath("$.[*].dataType").value(hasItem(DEFAULT_DATA_TYPE.toString())))
             .andExpect(jsonPath("$.[*].dataFormat").value(hasItem(DEFAULT_DATA_FORMAT)))
-            .andExpect(jsonPath("$.[*].values").value(hasItem(DEFAULT_VALUES)));
+            .andExpect(jsonPath("$.[*].fieldValues").value(hasItem(DEFAULT_FIELD_VALUES)));
     }
     
     @Test
@@ -169,7 +169,7 @@ public class BluFieldResourceIT {
             .andExpect(jsonPath("$.label").value(DEFAULT_LABEL))
             .andExpect(jsonPath("$.dataType").value(DEFAULT_DATA_TYPE.toString()))
             .andExpect(jsonPath("$.dataFormat").value(DEFAULT_DATA_FORMAT))
-            .andExpect(jsonPath("$.values").value(DEFAULT_VALUES));
+            .andExpect(jsonPath("$.fieldValues").value(DEFAULT_FIELD_VALUES));
     }
 
     @Test
@@ -197,7 +197,7 @@ public class BluFieldResourceIT {
             .label(UPDATED_LABEL)
             .dataType(UPDATED_DATA_TYPE)
             .dataFormat(UPDATED_DATA_FORMAT)
-            .values(UPDATED_VALUES);
+            .fieldValues(UPDATED_FIELD_VALUES);
 
         restBluFieldMockMvc.perform(put("/api/blu-fields")
             .contentType(MediaType.APPLICATION_JSON)
@@ -212,7 +212,7 @@ public class BluFieldResourceIT {
         assertThat(testBluField.getLabel()).isEqualTo(UPDATED_LABEL);
         assertThat(testBluField.getDataType()).isEqualTo(UPDATED_DATA_TYPE);
         assertThat(testBluField.getDataFormat()).isEqualTo(UPDATED_DATA_FORMAT);
-        assertThat(testBluField.getValues()).isEqualTo(UPDATED_VALUES);
+        assertThat(testBluField.getFieldValues()).isEqualTo(UPDATED_FIELD_VALUES);
     }
 
     @Test

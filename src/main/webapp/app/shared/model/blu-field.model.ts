@@ -10,7 +10,7 @@ export interface IBluField {
   label?: string;
   dataType?: BluFieldType;
   dataFormat?: string;
-  values?: string;
+  fieldValues?: string;
   bluFieldStringValue?: IBluFieldStringValue;
   bluFieldCurrencyValue?: IBluFieldCurrencyValue;
   bluFieldNumberValue?: IBluFieldNumberValue;

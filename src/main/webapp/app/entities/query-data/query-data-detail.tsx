@@ -26,11 +26,11 @@ export const QueryDataDetail = (props: IQueryDataDetailProps) => {
         </h2>
         <dl className="jh-entity-details">
           <dt>
-            <span id="value">
-              <Translate contentKey="emulatorApp.queryData.value">Value</Translate>
+            <span id="dataValue">
+              <Translate contentKey="emulatorApp.queryData.dataValue">Data Value</Translate>
             </span>
           </dt>
-          <dd>{queryDataEntity.value}</dd>
+          <dd>{queryDataEntity.dataValue}</dd>
           <dt>
             <Translate contentKey="emulatorApp.queryData.dataModel">Data Model</Translate>
           </dt>

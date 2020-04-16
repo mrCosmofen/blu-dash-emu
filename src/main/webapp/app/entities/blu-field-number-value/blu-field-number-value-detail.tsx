@@ -27,11 +27,11 @@ export const BluFieldNumberValueDetail = (props: IBluFieldNumberValueDetailProps
         </h2>
         <dl className="jh-entity-details">
           <dt>
-            <span id="value">
-              <Translate contentKey="emulatorApp.bluFieldNumberValue.value">Value</Translate>
+            <span id="fieldValue">
+              <Translate contentKey="emulatorApp.bluFieldNumberValue.fieldValue">Field Value</Translate>
             </span>
           </dt>
-          <dd>{bluFieldNumberValueEntity.value}</dd>
+          <dd>{bluFieldNumberValueEntity.fieldValue}</dd>
           <dt>
             <Translate contentKey="emulatorApp.bluFieldNumberValue.bluField">Blu Field</Translate>
           </dt>

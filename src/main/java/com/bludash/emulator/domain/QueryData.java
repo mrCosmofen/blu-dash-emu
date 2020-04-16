@@ -24,8 +24,8 @@ public class QueryData implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "value")
-    private String value;
+    @Column(name = "data_value")
+    private String dataValue;
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -44,17 +44,17 @@ public class QueryData implements Serializable {
         this.id = id;
     }
 
-    public String getValue() {
-        return value;
+    public String getDataValue() {
+        return dataValue;
     }
 
-    public QueryData value(String value) {
-        this.value = value;
+    public QueryData dataValue(String dataValue) {
+        this.dataValue = dataValue;
         return this;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public void setDataValue(String dataValue) {
+        this.dataValue = dataValue;
     }
 
     public DataModel getDataModel() {
@@ -104,7 +104,7 @@ public class QueryData implements Serializable {
     public String toString() {
         return "QueryData{" +
             "id=" + getId() +
-            ", value='" + getValue() + "'" +
+            ", dataValue='" + getDataValue() + "'" +
             "}";
     }
 }

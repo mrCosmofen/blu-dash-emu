@@ -41,8 +41,8 @@ public class BluField implements Serializable {
     @Column(name = "data_format")
     private String dataFormat;
 
-    @Column(name = "values")
-    private String values;
+    @Column(name = "field_values")
+    private String fieldValues;
 
     @OneToOne(mappedBy = "bluField")
     @JsonIgnore
@@ -121,17 +121,17 @@ public class BluField implements Serializable {
         this.dataFormat = dataFormat;
     }
 
-    public String getValues() {
-        return values;
+    public String getFieldValues() {
+        return fieldValues;
     }
 
-    public BluField values(String values) {
-        this.values = values;
+    public BluField fieldValues(String fieldValues) {
+        this.fieldValues = fieldValues;
         return this;
     }
 
-    public void setValues(String values) {
-        this.values = values;
+    public void setFieldValues(String fieldValues) {
+        this.fieldValues = fieldValues;
     }
 
     public BluFieldStringValue getBluFieldStringValue() {
@@ -211,7 +211,7 @@ public class BluField implements Serializable {
             ", label='" + getLabel() + "'" +
             ", dataType='" + getDataType() + "'" +
             ", dataFormat='" + getDataFormat() + "'" +
-            ", values='" + getValues() + "'" +
+            ", fieldValues='" + getFieldValues() + "'" +
             "}";
     }
 }

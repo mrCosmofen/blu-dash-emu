@@ -85,10 +85,10 @@ export const BluFieldNumberValueUpdate = (props: IBluFieldNumberValueUpdateProps
                 </AvGroup>
               ) : null}
               <AvGroup>
-                <Label id="valueLabel" for="blu-field-number-value-value">
-                  <Translate contentKey="emulatorApp.bluFieldNumberValue.value">Value</Translate>
+                <Label id="fieldValueLabel" for="blu-field-number-value-fieldValue">
+                  <Translate contentKey="emulatorApp.bluFieldNumberValue.fieldValue">Field Value</Translate>
                 </Label>
-                <AvField id="blu-field-number-value-value" type="string" className="form-control" name="value" />
+                <AvField id="blu-field-number-value-fieldValue" type="string" className="form-control" name="fieldValue" />
               </AvGroup>
               <AvGroup>
                 <Label for="blu-field-number-value-bluField">

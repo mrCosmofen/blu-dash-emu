@@ -30,8 +30,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser
 public class BluFieldCurrencyValueResourceIT {
 
-    private static final Long DEFAULT_VALUE = 1L;
-    private static final Long UPDATED_VALUE = 2L;
+    private static final Long DEFAULT_FIELD_VALUE = 1L;
+    private static final Long UPDATED_FIELD_VALUE = 2L;
 
     private static final String DEFAULT_CURRENCY = "AAAAAAAAAA";
     private static final String UPDATED_CURRENCY = "BBBBBBBBBB";
@@ -55,7 +55,7 @@ public class BluFieldCurrencyValueResourceIT {
      */
     public static BluFieldCurrencyValue createEntity(EntityManager em) {
         BluFieldCurrencyValue bluFieldCurrencyValue = new BluFieldCurrencyValue()
-            .value(DEFAULT_VALUE)
+            .fieldValue(DEFAULT_FIELD_VALUE)
             .currency(DEFAULT_CURRENCY);
         return bluFieldCurrencyValue;
     }
@@ -67,7 +67,7 @@ public class BluFieldCurrencyValueResourceIT {
      */
     public static BluFieldCurrencyValue createUpdatedEntity(EntityManager em) {
         BluFieldCurrencyValue bluFieldCurrencyValue = new BluFieldCurrencyValue()
-            .value(UPDATED_VALUE)
+            .fieldValue(UPDATED_FIELD_VALUE)
             .currency(UPDATED_CURRENCY);
         return bluFieldCurrencyValue;
     }
@@ -92,7 +92,7 @@ public class BluFieldCurrencyValueResourceIT {
         List<BluFieldCurrencyValue> bluFieldCurrencyValueList = bluFieldCurrencyValueRepository.findAll();
         assertThat(bluFieldCurrencyValueList).hasSize(databaseSizeBeforeCreate + 1);
         BluFieldCurrencyValue testBluFieldCurrencyValue = bluFieldCurrencyValueList.get(bluFieldCurrencyValueList.size() - 1);
-        assertThat(testBluFieldCurrencyValue.getValue()).isEqualTo(DEFAULT_VALUE);
+        assertThat(testBluFieldCurrencyValue.getFieldValue()).isEqualTo(DEFAULT_FIELD_VALUE);
         assertThat(testBluFieldCurrencyValue.getCurrency()).isEqualTo(DEFAULT_CURRENCY);
     }
 
@@ -127,7 +127,7 @@ public class BluFieldCurrencyValueResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(bluFieldCurrencyValue.getId().intValue())))
-            .andExpect(jsonPath("$.[*].value").value(hasItem(DEFAULT_VALUE.intValue())))
+            .andExpect(jsonPath("$.[*].fieldValue").value(hasItem(DEFAULT_FIELD_VALUE.intValue())))
             .andExpect(jsonPath("$.[*].currency").value(hasItem(DEFAULT_CURRENCY)));
     }
     
@@ -142,7 +142,7 @@ public class BluFieldCurrencyValueResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(bluFieldCurrencyValue.getId().intValue()))
-            .andExpect(jsonPath("$.value").value(DEFAULT_VALUE.intValue()))
+            .andExpect(jsonPath("$.fieldValue").value(DEFAULT_FIELD_VALUE.intValue()))
             .andExpect(jsonPath("$.currency").value(DEFAULT_CURRENCY));
     }
 
@@ -167,7 +167,7 @@ public class BluFieldCurrencyValueResourceIT {
         // Disconnect from session so that the updates on updatedBluFieldCurrencyValue are not directly saved in db
         em.detach(updatedBluFieldCurrencyValue);
         updatedBluFieldCurrencyValue
-            .value(UPDATED_VALUE)
+            .fieldValue(UPDATED_FIELD_VALUE)
             .currency(UPDATED_CURRENCY);
 
         restBluFieldCurrencyValueMockMvc.perform(put("/api/blu-field-currency-values")
@@ -179,7 +179,7 @@ public class BluFieldCurrencyValueResourceIT {
         List<BluFieldCurrencyValue> bluFieldCurrencyValueList = bluFieldCurrencyValueRepository.findAll();
         assertThat(bluFieldCurrencyValueList).hasSize(databaseSizeBeforeUpdate);
         BluFieldCurrencyValue testBluFieldCurrencyValue = bluFieldCurrencyValueList.get(bluFieldCurrencyValueList.size() - 1);
-        assertThat(testBluFieldCurrencyValue.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testBluFieldCurrencyValue.getFieldValue()).isEqualTo(UPDATED_FIELD_VALUE);
         assertThat(testBluFieldCurrencyValue.getCurrency()).isEqualTo(UPDATED_CURRENCY);
     }
 

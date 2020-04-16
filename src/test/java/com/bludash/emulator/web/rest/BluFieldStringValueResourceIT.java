@@ -30,8 +30,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WithMockUser
 public class BluFieldStringValueResourceIT {
 
-    private static final String DEFAULT_VALUE = "AAAAAAAAAA";
-    private static final String UPDATED_VALUE = "BBBBBBBBBB";
+    private static final String DEFAULT_FIELD_VALUE = "AAAAAAAAAA";
+    private static final String UPDATED_FIELD_VALUE = "BBBBBBBBBB";
 
     @Autowired
     private BluFieldStringValueRepository bluFieldStringValueRepository;
@@ -52,7 +52,7 @@ public class BluFieldStringValueResourceIT {
      */
     public static BluFieldStringValue createEntity(EntityManager em) {
         BluFieldStringValue bluFieldStringValue = new BluFieldStringValue()
-            .value(DEFAULT_VALUE);
+            .fieldValue(DEFAULT_FIELD_VALUE);
         return bluFieldStringValue;
     }
     /**
@@ -63,7 +63,7 @@ public class BluFieldStringValueResourceIT {
      */
     public static BluFieldStringValue createUpdatedEntity(EntityManager em) {
         BluFieldStringValue bluFieldStringValue = new BluFieldStringValue()
-            .value(UPDATED_VALUE);
+            .fieldValue(UPDATED_FIELD_VALUE);
         return bluFieldStringValue;
     }
 
@@ -87,7 +87,7 @@ public class BluFieldStringValueResourceIT {
         List<BluFieldStringValue> bluFieldStringValueList = bluFieldStringValueRepository.findAll();
         assertThat(bluFieldStringValueList).hasSize(databaseSizeBeforeCreate + 1);
         BluFieldStringValue testBluFieldStringValue = bluFieldStringValueList.get(bluFieldStringValueList.size() - 1);
-        assertThat(testBluFieldStringValue.getValue()).isEqualTo(DEFAULT_VALUE);
+        assertThat(testBluFieldStringValue.getFieldValue()).isEqualTo(DEFAULT_FIELD_VALUE);
     }
 
     @Test
@@ -121,7 +121,7 @@ public class BluFieldStringValueResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(bluFieldStringValue.getId().intValue())))
-            .andExpect(jsonPath("$.[*].value").value(hasItem(DEFAULT_VALUE)));
+            .andExpect(jsonPath("$.[*].fieldValue").value(hasItem(DEFAULT_FIELD_VALUE)));
     }
     
     @Test
@@ -135,7 +135,7 @@ public class BluFieldStringValueResourceIT {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
             .andExpect(jsonPath("$.id").value(bluFieldStringValue.getId().intValue()))
-            .andExpect(jsonPath("$.value").value(DEFAULT_VALUE));
+            .andExpect(jsonPath("$.fieldValue").value(DEFAULT_FIELD_VALUE));
     }
 
     @Test
@@ -159,7 +159,7 @@ public class BluFieldStringValueResourceIT {
         // Disconnect from session so that the updates on updatedBluFieldStringValue are not directly saved in db
         em.detach(updatedBluFieldStringValue);
         updatedBluFieldStringValue
-            .value(UPDATED_VALUE);
+            .fieldValue(UPDATED_FIELD_VALUE);
 
         restBluFieldStringValueMockMvc.perform(put("/api/blu-field-string-values")
             .contentType(MediaType.APPLICATION_JSON)
@@ -170,7 +170,7 @@ public class BluFieldStringValueResourceIT {
         List<BluFieldStringValue> bluFieldStringValueList = bluFieldStringValueRepository.findAll();
         assertThat(bluFieldStringValueList).hasSize(databaseSizeBeforeUpdate);
         BluFieldStringValue testBluFieldStringValue = bluFieldStringValueList.get(bluFieldStringValueList.size() - 1);
-        assertThat(testBluFieldStringValue.getValue()).isEqualTo(UPDATED_VALUE);
+        assertThat(testBluFieldStringValue.getFieldValue()).isEqualTo(UPDATED_FIELD_VALUE);
     }
 
     @Test

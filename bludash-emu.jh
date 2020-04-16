@@ -31,19 +31,19 @@ entity BluField {
     label String
     dataType BluFieldType
     dataFormat String
-    values String
+    fieldValues String
 }
 entity BluFormData {
     retrieved Long
 }
 entity BluFieldStringValue {
-    value String
+    fieldValue String
 }
 entity BluFieldNumberValue {
-    value Long
+    fieldValue Long
 }
 entity BluFieldCurrencyValue {
-    value Long
+    fieldValue Long
     currency String
 }
 relationship OneToOne {
@@ -80,13 +80,13 @@ entity DataModel {
     dataFormat String
     maxLength Integer
     precision Integer
-    values Status
+    modelValues Status
 }
 entity Record {
     recordId Integer
 }
 entity QueryData {
-    value String
+    dataValue String
 }
 enum Status {
     WITHDRAWN, CARRIER_REJECTED, TENDER_BYPASSED, SPOTMARKET, OLD, EXPIRED, PENDING, LOAD_REMOVED, VOIDED, COMPLETED, ACCEPTED, SHIPPER_REJECTED, CANCELED, TENDERED, NO_OFFERS, REMOVED

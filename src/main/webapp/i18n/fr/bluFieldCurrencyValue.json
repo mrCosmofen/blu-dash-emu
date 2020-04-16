@@ -16,7 +16,7 @@
       "detail": {
         "title": "Blu Field Currency Value"
       },
-      "value": "Value",
+      "fieldValue": "Field Value",
       "currency": "Currency",
       "bluField": "Blu Field",
       "bluFormData": "Blu Form Data"

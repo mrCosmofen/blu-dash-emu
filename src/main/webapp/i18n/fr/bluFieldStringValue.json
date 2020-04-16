@@ -16,7 +16,7 @@
       "detail": {
         "title": "Blu Field String Value"
       },
-      "value": "Value",
+      "fieldValue": "Field Value",
       "bluField": "Blu Field",
       "bluFormData": "Blu Form Data"
     }

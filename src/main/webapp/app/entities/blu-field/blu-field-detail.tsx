@@ -50,11 +50,11 @@ export const BluFieldDetail = (props: IBluFieldDetailProps) => {
           </dt>
           <dd>{bluFieldEntity.dataFormat}</dd>
           <dt>
-            <span id="values">
-              <Translate contentKey="emulatorApp.bluField.values">Values</Translate>
+            <span id="fieldValues">
+              <Translate contentKey="emulatorApp.bluField.fieldValues">Field Values</Translate>
             </span>
           </dt>
-          <dd>{bluFieldEntity.values}</dd>
+          <dd>{bluFieldEntity.fieldValues}</dd>
           <dt>
             <Translate contentKey="emulatorApp.bluField.bluForm">Blu Form</Translate>
           </dt>

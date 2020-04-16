@@ -2,7 +2,7 @@
     "name": "BluFieldNumberValue",
     "fields": [
         {
-            "fieldName": "value",
+            "fieldName": "fieldValue",
             "fieldType": "Long"
         }
     ],

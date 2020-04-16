@@ -115,15 +115,15 @@ export const DataModelUpdate = (props: IDataModelUpdateProps) => {
                 <AvField id="data-model-precision" type="string" className="form-control" name="precision" />
               </AvGroup>
               <AvGroup>
-                <Label id="valuesLabel" for="data-model-values">
-                  <Translate contentKey="emulatorApp.dataModel.values">Values</Translate>
+                <Label id="modelValuesLabel" for="data-model-modelValues">
+                  <Translate contentKey="emulatorApp.dataModel.modelValues">Model Values</Translate>
                 </Label>
                 <AvInput
-                  id="data-model-values"
+                  id="data-model-modelValues"
                   type="select"
                   className="form-control"
-                  name="values"
-                  value={(!isNew && dataModelEntity.values) || 'WITHDRAWN'}
+                  name="modelValues"
+                  value={(!isNew && dataModelEntity.modelValues) || 'WITHDRAWN'}
                 >
                   <option value="WITHDRAWN">{translate('emulatorApp.Status.WITHDRAWN')}</option>
                   <option value="CARRIER_REJECTED">{translate('emulatorApp.Status.CARRIER_REJECTED')}</option>

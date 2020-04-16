@@ -20,7 +20,7 @@
       "label": "Label",
       "dataType": "Data Type",
       "dataFormat": "Data Format",
-      "values": "Values",
+      "fieldValues": "Field Values",
       "bluFieldStringValue": "Blu Field String Value",
       "bluFieldCurrencyValue": "Blu Field Currency Value",
       "bluFieldNumberValue": "Blu Field Number Value",

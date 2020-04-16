@@ -21,7 +21,7 @@
       "dataFormat": "Data Format",
       "maxLength": "Max Length",
       "precision": "Precision",
-      "values": "Values",
+      "modelValues": "Model Values",
       "queryData": "Query Data",
       "dataSet": "Data Set"
     }

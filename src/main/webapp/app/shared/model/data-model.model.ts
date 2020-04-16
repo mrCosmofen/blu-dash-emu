@@ -9,7 +9,7 @@ export interface IDataModel {
   dataFormat?: string;
   maxLength?: number;
   precision?: number;
-  values?: Status;
+  modelValues?: Status;
   queryData?: IQueryData;
   dataSet?: IDataSet;
 }

@@ -85,10 +85,10 @@ export const QueryDataUpdate = (props: IQueryDataUpdateProps) => {
                 </AvGroup>
               ) : null}
               <AvGroup>
-                <Label id="valueLabel" for="query-data-value">
-                  <Translate contentKey="emulatorApp.queryData.value">Value</Translate>
+                <Label id="dataValueLabel" for="query-data-dataValue">
+                  <Translate contentKey="emulatorApp.queryData.dataValue">Data Value</Translate>
                 </Label>
-                <AvField id="query-data-value" type="text" name="value" />
+                <AvField id="query-data-dataValue" type="text" name="dataValue" />
               </AvGroup>
               <AvGroup>
                 <Label for="query-data-dataModel">

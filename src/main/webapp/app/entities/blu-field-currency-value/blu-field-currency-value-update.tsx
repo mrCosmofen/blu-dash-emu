@@ -87,10 +87,10 @@ export const BluFieldCurrencyValueUpdate = (props: IBluFieldCurrencyValueUpdateP
                 </AvGroup>
               ) : null}
               <AvGroup>
-                <Label id="valueLabel" for="blu-field-currency-value-value">
-                  <Translate contentKey="emulatorApp.bluFieldCurrencyValue.value">Value</Translate>
+                <Label id="fieldValueLabel" for="blu-field-currency-value-fieldValue">
+                  <Translate contentKey="emulatorApp.bluFieldCurrencyValue.fieldValue">Field Value</Translate>
                 </Label>
-                <AvField id="blu-field-currency-value-value" type="string" className="form-control" name="value" />
+                <AvField id="blu-field-currency-value-fieldValue" type="string" className="form-control" name="fieldValue" />
               </AvGroup>
               <AvGroup>
                 <Label id="currencyLabel" for="blu-field-currency-value-currency">
