@@ -1,0 +1,23 @@
+{
+  "emulatorApp": {
+    "Status": {
+      "null": "",
+      "WITHDRAWN": "WITHDRAWN",
+      "CARRIER_REJECTED": "CARRIER_REJECTED",
+      "TENDER_BYPASSED": "TENDER_BYPASSED",
+      "SPOTMARKET": "SPOTMARKET",
+      "OLD": "OLD",
+      "EXPIRED": "EXPIRED",
+      "PENDING": "PENDING",
+      "LOAD_REMOVED": "LOAD_REMOVED",
+      "VOIDED": "VOIDED",
+      "COMPLETED": "COMPLETED",
+      "ACCEPTED": "ACCEPTED",
+      "SHIPPER_REJECTED": "SHIPPER_REJECTED",
+      "CANCELED": "CANCELED",
+      "TENDERED": "TENDERED",
+      "NO_OFFERS": "NO_OFFERS",
+      "REMOVED": "REMOVED"
+    }
+  }
+}

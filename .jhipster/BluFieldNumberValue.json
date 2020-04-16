@@ -1,0 +1,39 @@
+{
+    "name": "BluFieldNumberValue",
+    "fields": [
+        {
+            "fieldName": "value",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "bluField",
+            "otherEntityRelationshipName": "bluFieldNumberValue",
+            "relationshipName": "bluField",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bluFormData",
+            "otherEntityRelationshipName": "bluFieldNumberValue",
+            "relationshipName": "bluFormData",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416110100",
+    "entityTableName": "blu_field_number_value",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

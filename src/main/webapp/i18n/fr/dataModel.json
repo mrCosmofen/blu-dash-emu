@@ -1,0 +1,29 @@
+{
+  "emulatorApp": {
+    "dataModel": {
+      "home": {
+        "title": "DataModels",
+        "createLabel": "Créer un nouveau Data Model",
+        "createOrEditLabel": "Créer ou éditer un Data Model",
+        "notFound": "Aucun Data Model trouvé"
+      },
+      "created": "Un nouveau Data Model a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Data Model avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Data Model avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Data Model {{ id }} ?"
+      },
+      "detail": {
+        "title": "Data Model"
+      },
+      "key": "Key",
+      "label": "Label",
+      "dataFormat": "Data Format",
+      "maxLength": "Max Length",
+      "precision": "Precision",
+      "values": "Values",
+      "queryData": "Query Data",
+      "dataSet": "Data Set"
+    }
+  }
+}

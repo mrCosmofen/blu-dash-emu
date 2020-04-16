@@ -1,0 +1,24 @@
+{
+  "emulatorApp": {
+    "bluFieldNumberValue": {
+      "home": {
+        "title": "BluFieldNumberValues",
+        "createLabel": "Créer un nouveau Blu Field Number Value",
+        "createOrEditLabel": "Créer ou éditer un Blu Field Number Value",
+        "notFound": "Aucun Blu Field Number Value trouvé"
+      },
+      "created": "Un nouveau Blu Field Number Value a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Blu Field Number Value avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Blu Field Number Value avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Blu Field Number Value {{ id }} ?"
+      },
+      "detail": {
+        "title": "Blu Field Number Value"
+      },
+      "value": "Value",
+      "bluField": "Blu Field",
+      "bluFormData": "Blu Form Data"
+    }
+  }
+}

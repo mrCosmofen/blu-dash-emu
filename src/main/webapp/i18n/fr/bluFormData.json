@@ -1,0 +1,27 @@
+{
+  "emulatorApp": {
+    "bluFormData": {
+      "home": {
+        "title": "BluFormData",
+        "createLabel": "Créer un nouveau Blu Form Data",
+        "createOrEditLabel": "Créer ou éditer un Blu Form Data",
+        "notFound": "Aucun Blu Form Data trouvé"
+      },
+      "created": "Un nouveau Blu Form Data a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Blu Form Data avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Blu Form Data avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Blu Form Data {{ id }} ?"
+      },
+      "detail": {
+        "title": "Blu Form Data"
+      },
+      "formKey": "Form Key",
+      "retrieved": "Retrieved",
+      "bluFieldStringValue": "Blu Field String Value",
+      "bluFieldCurrencyValue": "Blu Field Currency Value",
+      "bluFieldNumberValue": "Blu Field Number Value",
+      "bluForm": "Blu Form"
+    }
+  }
+}

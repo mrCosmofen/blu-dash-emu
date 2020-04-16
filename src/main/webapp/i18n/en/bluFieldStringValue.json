@@ -1,0 +1,24 @@
+{
+  "emulatorApp": {
+    "bluFieldStringValue": {
+      "home": {
+        "title": "Blu Field String Values",
+        "createLabel": "Create a new Blu Field String Value",
+        "createOrEditLabel": "Create or edit a Blu Field String Value",
+        "notFound": "No Blu Field String Values found"
+      },
+      "created": "A new Blu Field String Value is created with identifier {{ param }}",
+      "updated": "A Blu Field String Value is updated with identifier {{ param }}",
+      "deleted": "A Blu Field String Value is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Blu Field String Value {{ id }}?"
+      },
+      "detail": {
+        "title": "Blu Field String Value"
+      },
+      "value": "Value",
+      "bluField": "Blu Field",
+      "bluFormData": "Blu Form Data"
+    }
+  }
+}

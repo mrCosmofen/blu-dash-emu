@@ -1,0 +1,43 @@
+{
+    "name": "BluFieldCurrencyValue",
+    "fields": [
+        {
+            "fieldName": "value",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "currency",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "bluField",
+            "otherEntityRelationshipName": "bluFieldCurrencyValue",
+            "relationshipName": "bluField",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bluFormData",
+            "otherEntityRelationshipName": "bluFieldCurrencyValue",
+            "relationshipName": "bluFormData",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416110200",
+    "entityTableName": "blu_field_currency_value",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}
