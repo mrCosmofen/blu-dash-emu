@@ -1,0 +1,25 @@
+{
+  "emulatorApp": {
+    "dataSet": {
+      "home": {
+        "title": "DataSets",
+        "createLabel": "Créer un nouveau Data Set",
+        "createOrEditLabel": "Créer ou éditer un Data Set",
+        "notFound": "Aucun Data Set trouvé"
+      },
+      "created": "Un nouveau Data Set a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Data Set avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Data Set avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Data Set {{ id }} ?"
+      },
+      "detail": {
+        "title": "Data Set"
+      },
+      "key": "Key",
+      "label": "Label",
+      "landingPage": "Landing Page",
+      "dataModel": "Data Model"
+    }
+  }
+}

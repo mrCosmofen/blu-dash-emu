@@ -1,0 +1,39 @@
+{
+    "name": "DataSet",
+    "fields": [
+        {
+            "fieldName": "key",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "landingPage",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "dataModel",
+            "otherEntityRelationshipName": "dataSet",
+            "relationshipName": "dataModel"
+        }
+    ],
+    "changelogDate": "20200416103400",
+    "javadoc": "The Dataset entity.\\n@author A true hipster",
+    "entityTableName": "data_set",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

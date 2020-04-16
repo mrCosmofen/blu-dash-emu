@@ -1,0 +1,48 @@
+{
+    "name": "BluField",
+    "fields": [
+        {
+            "fieldName": "key",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataType",
+            "fieldType": "BluFieldType",
+            "fieldValues": "ENUM,NUMBER,PERCENT,TEXT,DATETIME,CURRENCY,LATLONG"
+        },
+        {
+            "fieldName": "dataFormat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "values",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bluForm",
+            "otherEntityRelationshipName": "bluField",
+            "relationshipName": "bluForm",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416103200",
+    "entityTableName": "blu_field",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

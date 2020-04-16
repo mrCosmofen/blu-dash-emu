@@ -1,0 +1,50 @@
+{
+    "name": "BluForm",
+    "fields": [
+        {
+            "fieldName": "key",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "category",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pollingInterval",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "modified",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bluField",
+            "otherEntityRelationshipName": "bluForm",
+            "relationshipName": "bluField"
+        }
+    ],
+    "changelogDate": "20200416103100",
+    "entityTableName": "blu_form",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

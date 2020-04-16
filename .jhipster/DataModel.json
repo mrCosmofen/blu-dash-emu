@@ -1,0 +1,59 @@
+{
+    "name": "DataModel",
+    "fields": [
+        {
+            "fieldName": "key",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataFormat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "maxLength",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "precision",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "values",
+            "fieldType": "Status",
+            "fieldValues": "WITHDRAWN,CARRIER_REJECTED,TENDER_BYPASSED,SPOTMARKET,OLD,EXPIRED,PENDING,LOAD_REMOVED,VOIDED,COMPLETED,ACCEPTED,SHIPPER_REJECTED,CANCELED,TENDERED,NO_OFFERS,REMOVED"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "queryData",
+            "otherEntityRelationshipName": "dataModel",
+            "relationshipName": "queryData",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "dataSet",
+            "otherEntityRelationshipName": "dataModel",
+            "relationshipName": "dataSet",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416103600",
+    "entityTableName": "data_model",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

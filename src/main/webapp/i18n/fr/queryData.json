@@ -1,0 +1,25 @@
+{
+  "emulatorApp": {
+    "queryData": {
+      "home": {
+        "title": "QueryData",
+        "createLabel": "Créer un nouveau Query Data",
+        "createOrEditLabel": "Créer ou éditer un Query Data",
+        "notFound": "Aucun Query Data trouvé"
+      },
+      "created": "Un nouveau Query Data a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Query Data avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Query Data avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Query Data {{ id }} ?"
+      },
+      "detail": {
+        "title": "Query Data"
+      },
+      "recordId": "Record Id",
+      "value": "Value",
+      "dataModel": "Data Model",
+      "record": "Record"
+    }
+  }
+}

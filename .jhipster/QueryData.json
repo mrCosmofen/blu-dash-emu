@@ -1,0 +1,43 @@
+{
+    "name": "QueryData",
+    "fields": [
+        {
+            "fieldName": "recordId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "dataModel",
+            "otherEntityRelationshipName": "queryData",
+            "relationshipName": "dataModel",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "record",
+            "otherEntityRelationshipName": "queryData",
+            "relationshipName": "record",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416103800",
+    "entityTableName": "query_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}
