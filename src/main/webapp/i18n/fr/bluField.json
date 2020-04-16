@@ -1,0 +1,27 @@
+{
+  "emulatorApp": {
+    "bluField": {
+      "home": {
+        "title": "BluFields",
+        "createLabel": "Créer un nouveau Blu Field",
+        "createOrEditLabel": "Créer ou éditer un Blu Field",
+        "notFound": "Aucun Blu Field trouvé"
+      },
+      "created": "Un nouveau Blu Field a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Blu Field avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Blu Field avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Blu Field {{ id }} ?"
+      },
+      "detail": {
+        "title": "Blu Field"
+      },
+      "key": "Key",
+      "label": "Label",
+      "dataType": "Data Type",
+      "dataFormat": "Data Format",
+      "values": "Values",
+      "bluForm": "Blu Form"
+    }
+  }
+}

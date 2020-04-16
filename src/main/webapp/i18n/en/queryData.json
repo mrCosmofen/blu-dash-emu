@@ -1,0 +1,25 @@
+{
+  "emulatorApp": {
+    "queryData": {
+      "home": {
+        "title": "Query Data",
+        "createLabel": "Create a new Query Data",
+        "createOrEditLabel": "Create or edit a Query Data",
+        "notFound": "No Query Data found"
+      },
+      "created": "A new Query Data is created with identifier {{ param }}",
+      "updated": "A Query Data is updated with identifier {{ param }}",
+      "deleted": "A Query Data is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Query Data {{ id }}?"
+      },
+      "detail": {
+        "title": "Query Data"
+      },
+      "recordId": "Record Id",
+      "value": "Value",
+      "dataModel": "Data Model",
+      "record": "Record"
+    }
+  }
+}

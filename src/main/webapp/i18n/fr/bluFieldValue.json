@@ -1,0 +1,21 @@
+{
+  "emulatorApp": {
+    "bluFieldValue": {
+      "home": {
+        "title": "BluFieldValues",
+        "createLabel": "Créer un nouveau Blu Field Value",
+        "createOrEditLabel": "Créer ou éditer un Blu Field Value",
+        "notFound": "Aucun Blu Field Value trouvé"
+      },
+      "created": "Un nouveau Blu Field Value a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Blu Field Value avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Blu Field Value avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Blu Field Value {{ id }} ?"
+      },
+      "detail": {
+        "title": "Blu Field Value"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "Record",
+    "fields": [
+        {
+            "fieldName": "recordId",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "queryData",
+            "otherEntityRelationshipName": "record",
+            "relationshipName": "queryData"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "query",
+            "otherEntityRelationshipName": "record",
+            "relationshipName": "query",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416102700",
+    "entityTableName": "record",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <!--
+        Added the constraints for entity BluField.
+    -->
+    <changeSet id="20200416102200-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="blu_form_id"
+                                 baseTableName="blu_field"
+                                 constraintName="fk_blu_field_blu_form_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="blu_form"/>
+
+    </changeSet>
+</databaseChangeLog>

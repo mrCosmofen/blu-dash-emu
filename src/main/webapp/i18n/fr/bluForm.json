@@ -1,0 +1,28 @@
+{
+  "emulatorApp": {
+    "bluForm": {
+      "home": {
+        "title": "BluForms",
+        "createLabel": "Créer un nouveau Blu Form",
+        "createOrEditLabel": "Créer ou éditer un Blu Form",
+        "notFound": "Aucun Blu Form trouvé"
+      },
+      "created": "Un nouveau Blu Form a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Blu Form avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Blu Form avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Blu Form {{ id }} ?"
+      },
+      "detail": {
+        "title": "Blu Form"
+      },
+      "key": "Key",
+      "label": "Label",
+      "category": "Category",
+      "productKey": "Product Key",
+      "pollingInterval": "Polling Interval",
+      "modified": "Modified",
+      "bluField": "Blu Field"
+    }
+  }
+}
