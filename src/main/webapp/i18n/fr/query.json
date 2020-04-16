@@ -1,0 +1,24 @@
+{
+  "emulatorApp": {
+    "query": {
+      "home": {
+        "title": "Queries",
+        "createLabel": "Créer un nouveau Query",
+        "createOrEditLabel": "Créer ou éditer un Query",
+        "notFound": "Aucun Query trouvé"
+      },
+      "created": "Un nouveau Query a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Query avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Query avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Query {{ id }} ?"
+      },
+      "detail": {
+        "title": "Query"
+      },
+      "key": "Key",
+      "label": "Label",
+      "record": "Record"
+    }
+  }
+}

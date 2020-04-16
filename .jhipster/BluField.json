@@ -1,0 +1,69 @@
+{
+    "name": "BluField",
+    "fields": [
+        {
+            "fieldName": "key",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataType",
+            "fieldType": "BluFieldType",
+            "fieldValues": "ENUM,NUMBER,PERCENT,TEXT,DATETIME,CURRENCY,LATLONG"
+        },
+        {
+            "fieldName": "dataFormat",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "values",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "bluFieldStringValue",
+            "otherEntityRelationshipName": "bluField",
+            "relationshipName": "bluFieldStringValue",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "bluFieldCurrencyValue",
+            "otherEntityRelationshipName": "bluField",
+            "relationshipName": "bluFieldCurrencyValue",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "bluFieldNumberValue",
+            "otherEntityRelationshipName": "bluField",
+            "relationshipName": "bluFieldNumberValue",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bluForm",
+            "otherEntityRelationshipName": "bluField",
+            "relationshipName": "bluForm",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416105800",
+    "entityTableName": "blu_field",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}

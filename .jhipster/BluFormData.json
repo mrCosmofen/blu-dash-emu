@@ -1,0 +1,53 @@
+{
+    "name": "BluFormData",
+    "fields": [
+        {
+            "fieldName": "formKey",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "retrieved",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bluFieldStringValue",
+            "otherEntityRelationshipName": "bluFormData",
+            "relationshipName": "bluFieldStringValue"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bluFieldCurrencyValue",
+            "otherEntityRelationshipName": "bluFormData",
+            "relationshipName": "bluFieldCurrencyValue"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bluFieldNumberValue",
+            "otherEntityRelationshipName": "bluFormData",
+            "relationshipName": "bluFieldNumberValue"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "bluForm",
+            "otherEntityRelationshipName": "bluFormData",
+            "relationshipName": "bluForm",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200416105900",
+    "entityTableName": "blu_form_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": [
+        "emulator"
+    ]
+}
